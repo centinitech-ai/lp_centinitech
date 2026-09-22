@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Brand } from "@/components/brand";
 import { Intro } from "@/components/intro";
 import { NeuralField } from "@/components/neural-field";
+import { HeroArtwork } from "@/components/hero-artwork";
+import Image from "next/image";
 
 const services = [
   { n: "01", title: "Sistemas sob medida", detail: "Plataformas que organizam operações, conectam equipes e acompanham o crescimento do negócio.", tag: "ARQUITETURA · PRODUTO" },
@@ -30,13 +32,14 @@ export default function Home() {
           <section className="hero" id="inicio">
             <div className="hero__ambient" />
             <NeuralField />
+            <HeroArtwork />
             <div className="hero__content container">
               <div className="eyebrow"><span className="eyebrow__dot" /> ENGENHARIA DIGITAL PARA O PRÓXIMO PASSO</div>
-              <h1>Complexidade, <em>transformada</em> em avanço.</h1>
-              <p>Construímos tecnologia com direção: sistemas, automações e experiências digitais que resolvem o que realmente importa.</p>
+              <h1>Tecnologia sob medida. <em>Impacto no mundo real.</em></h1>
+              <p>Criamos sistemas, automações, sites e aplicativos para resolver desafios reais e abrir novas possibilidades para o seu negócio.</p>
               <div className="hero__actions">
-                <Link className="button button--primary" href="/iniciar">Vamos construir juntos <span aria-hidden="true">↗</span></Link>
-                <a className="text-link" href="#atuacao">Explore a Centini <span aria-hidden="true">↓</span></a>
+                <Link className="button button--primary" href="/iniciar">Iniciar um projeto <span aria-hidden="true">↗</span></Link>
+                <a className="text-link" href="https://wa.me/5511941262352?text=Ol%C3%A1%2C%20Centini%20Tech!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">Falar no WhatsApp <span aria-hidden="true">↗</span></a>
               </div>
             </div>
             <div className="hero__foot container"><span>DESENVOLVIMENTO / AUTOMAÇÃO / PRODUTO</span><span>SCROLL PARA EXPLORAR <span aria-hidden="true">↓</span></span></div>
@@ -61,7 +64,7 @@ export default function Home() {
               <div className="solution-grid">
                 <article className="solution-card solution-card--assistant">
                   <div className="solution-card__top"><span>SOLUÇÃO CENTINI TECH / 001</span><span className="solution-card__glyph" aria-hidden="true">✳</span></div>
-                  <div className="conversation-art" aria-hidden="true"><div className="conversation-art__bubble">Olá! Como posso ajudar?</div><div className="conversation-art__bubble conversation-art__bubble--right">Quero conhecer as opções.</div><div className="conversation-art__data"><span>CONTEXTO IDENTIFICADO</span><span>✓ INTERESSE REGISTRADO</span><span>✓ DADOS ORGANIZADOS</span></div></div>
+                  <div className="conversation-art" aria-hidden="true"><Image src="/conversation-3d.webp" alt="" fill sizes="(max-width: 720px) 100vw, 50vw" /><div className="conversation-art__data"><span>✓ QUALIFICA</span><span>✓ REGISTRA</span><span>✓ ACOMPANHA</span></div></div>
                   <div className="solution-card__copy"><h3>Assistente de WhatsApp</h3><p>Uma conversa que entende, qualifica e organiza informações. Com uma plataforma para acompanhar cada atendimento e transformar dados em continuidade.</p><span className="tagline">CONVERSA + CONTEXTO + CONTROLE</span></div>
                 </article>
                 <article className="solution-card solution-card--provum">
